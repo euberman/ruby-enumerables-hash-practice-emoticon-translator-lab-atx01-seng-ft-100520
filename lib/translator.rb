@@ -2,7 +2,7 @@
 require "yaml"
 
 def load_library (file_location)
-  data = YAML.load_file('./lib/emoticons.yml')
+  data = YAML.load_file(file_location)
   emoticons = {}
   data.each { |e_key, e_value| emoticons[e_key] = {english: e_value[0], japanese: e_value[1]} }
   puts emoticons
