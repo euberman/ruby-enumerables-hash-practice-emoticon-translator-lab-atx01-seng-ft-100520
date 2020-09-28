@@ -33,14 +33,14 @@ def get_english_meaning (file_location, japanese_emoticon)
   
   result = "" 
   data.each { |key,value| 
-    if value[:japanese] == japanese_emoticon
+    if value[:japanese] <==> japanese_emoticon
       result = key
     end
   }
-  if result
-    return result
-  else
+  if result.empty?
     return "Sorry, that emoticon was not found"
+  else
+    return result.to_s
   end
 
 end
