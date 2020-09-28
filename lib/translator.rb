@@ -7,8 +7,7 @@ def load_library (file_location)
   data.each { |e_key, e_value|
      result[e_key] = {:english => e_value[0], :japanese => e_value[1]}
   }
-
-  emoticons
+  result
 end
 
 def get_japanese_emoticon (file_location, english_emoticon)
