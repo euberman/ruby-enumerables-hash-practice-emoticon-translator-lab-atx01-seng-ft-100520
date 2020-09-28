@@ -19,10 +19,10 @@ def get_japanese_emoticon (file_location, english_emoticon)
       result = value[:japanese]
     end
   }
-  if result
-    return result
-  else
+  if result.empty?
     return "Sorry, that emoticon was not found"
+  else
+    return result
   end
   
   #data.each { |key,value| 
