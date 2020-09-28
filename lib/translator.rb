@@ -38,11 +38,9 @@ def get_english_meaning (file_location, japanese_emoticon)
     end
   }
   if result
-    return result.[]
+    return result
   else
     return "Sorry, that emoticon was not found"
   end
-  
-  #
-  #return puts "Sorry, that emoticon was not found"
+
 end
