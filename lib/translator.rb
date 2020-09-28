@@ -31,7 +31,7 @@ def get_english_meaning (file_location, japanese_emoticon)
   
   result = data.select { |key,value| value[:japanese] == japanese_emoticon } 
   if result
-    return result[]
+    return result.[]
   else
     return "Sorry, that emoticon was not found"
   end
