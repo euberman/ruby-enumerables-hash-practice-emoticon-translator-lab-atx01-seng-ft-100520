@@ -12,16 +12,32 @@ end
 
 def get_japanese_emoticon (file_location, english_emoticon)
   data = load_library(file_location)
-  data.each { |key,value| 
-    if value[:english] == english_emoticon
-  }
-  return puts "Sorry, that emoticon was not found"
+  
+  result = data.select { |key,value| value[:english] == english_emoticon }
+  if result
+    return result[:japanese]
+  else
+    return "Sorry, that emoticon was not found"
+  end
+  
+  #data.each { |key,value| 
+  #  if value[:english] == english_emoticon
+  #}
+  #return puts "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning (file_location, japanese_emoticon)
   data = load_library(file_location)
-  data.each { |key,value| 
-    return key if value[:japanese] == japanese_emoticon
-  }
-  return puts "Sorry, that emoticon was not found"
+  
+  result = data.select { |key,value| value[:japanese] == japanese_emoticon } 
+  if result
+    return result[]
+  else
+    return "Sorry, that emoticon was not found"
+  end
+  
+  #data.each { |key,value| 
+  #  return key if value[:japanese] == japanese_emoticon
+  #}
+  #return puts "Sorry, that emoticon was not found"
 end
