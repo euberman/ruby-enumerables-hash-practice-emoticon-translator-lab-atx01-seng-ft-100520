@@ -4,9 +4,9 @@ require "yaml"
 def load_library
   data = YAML.load_file('emoticons.yml')
   emoticons = {}
-  data.each { |e_meaning, e_value|
-    emoticons[e_meaning]
-  
+  data.each { |e_key, e_value| emoticons[e_key] = {english: e_value[0], japanese: e_value[1]} }
+  puts emoticons
+  emoticons
 end
 
 def get_japanese_emoticon
