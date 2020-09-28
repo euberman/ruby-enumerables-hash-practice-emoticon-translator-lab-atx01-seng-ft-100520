@@ -38,7 +38,7 @@ def get_english_meaning (file_location, japanese_emoticon)
   
   result = "" 
   data.each { |key,value| 
-    if value[:japanese] <==> japanese_emoticon
+    if value[:japanese] == japanese_emoticon
       result = key
     end
   }
