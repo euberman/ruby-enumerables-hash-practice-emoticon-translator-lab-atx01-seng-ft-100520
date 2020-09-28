@@ -13,7 +13,8 @@ end
 def get_japanese_emoticon (file_location, english_emoticon)
   data = load_library(file_location)
   
-  result = data.select { |key,value| value[:english] == english_emoticon }
+  result = ""
+  data.each { |key,value| value[:english] == english_emoticon }
   if result
     return result[:japanese]
   else
